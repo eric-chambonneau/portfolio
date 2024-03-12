@@ -1,32 +1,50 @@
 nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  display: flex; /* Use flexbox for better alignment */
+  justify-content: space-between; /* Distribute elements horizontally */
+}
+
+nav img {
+  display: inline-block;
+  margin-right: 10px;
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Make the list items flexible */
+}
+
+nav li {
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center elements vertically */
   }
-  
+
   nav img {
-    display: inline-block;
-    margin-right: 10px;
-    height: 40px;
+    margin-bottom: 10px; /* Add space between logo and links on small screens */
   }
-  
+
   nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    flex-direction: column; /* Make list items stack vertically */
   }
-  
-  nav li {
-    display: inline-block;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    color: #ccc;
-  }
+}
